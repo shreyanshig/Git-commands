@@ -62,7 +62,7 @@ public class ElectionResultControllerServlet extends HttpServlet {
         }
         catch(Exception ex){
             ex.printStackTrace();
-            System.out.println("Some exception occured in ElectionResultControllerServlet");
+            System.out.println("exception in ElectionResultControllerServlet "+ex);
             request.setAttribute("Exception", ex);
             rd = request.getRequestDispatcher("showexception.jsp");
         }

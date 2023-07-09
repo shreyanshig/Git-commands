@@ -46,6 +46,7 @@ public class AddVoteControllerServlet extends HttpServlet {
             String candidateId = (String)request.getParameter("candidateid");
             VoteDTO vote = new VoteDTO(candidateId, userid);
             boolean result = VoteDAO.addVote(vote);
+            System.out.println("result is"+result);
             CandidateInfo candidate = VoteDAO.getVote(candidateId);
             if(result == true)
                 session.setAttribute("candidate", candidate);
